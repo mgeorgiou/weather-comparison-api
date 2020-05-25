@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController
 class HelloResource {
     @GetMapping("/hello")
     fun hello(@RequestParam(value = "name", defaultValue = "World") name: String): String {
+        println("The name is $name")
         return "Hello, $name!"
     }
 }
